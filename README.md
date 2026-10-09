@@ -1,8 +1,8 @@
 # Sébastien Puech
 
-I direct AI work at an international humanitarian organisation — several thousand people, around
-forty countries. I am not a software engineer. Agents write the code; my job is to decide what
-gets built, and to know whether it works.
+I am part of the team coordinating AI transformation at an international humanitarian NGO of
+4,000 staff. I trained as a computer science engineer; today agents write the code, and my job is
+to decide what gets built, and to know whether it works.
 
 That second half turned out to be the hard part, and it is what these repositories are about.
 
@@ -27,18 +27,19 @@ packages. Run them and disagree with the numbers rather than take them on trust 
 point.
 
 Both also carry a section saying what they do *not* do. The most important line in either one is
-that the judge used to score quality has never been compared against human annotators. Until that
-number exists, every quality figure I publish is internally consistent and externally unproven.
-Producing it — a few hundred traces, scored by human annotators, compared to the judge with an
-agreement coefficient — is the current piece of work, and the result gets published whatever it
-says. A bad number that is documented beats no measurement at all.
+that the judge used to score quality is weakly calibrated. Scored against one human annotator in
+September 2026, it reached a kappa of 0.27, and the same model with no grid did as well; the
+details are in the `agent-eval-harness` README. Until that number improves, every quality figure
+I publish is internally consistent and externally unproven. Improving it is the current piece of
+work. A bad number that is documented beats no measurement at all.
 
 ## What I am actually claiming
 
 Not that these tools are novel. Eval platforms pin baselines and flag regressions; that ground is
 well occupied, and both READMEs name the tools that occupy it.
 
-What I have is narrower: a non-engineer who measures agent work instead of trusting it.
+What I have is narrower: a former operations director who measures agent work instead of trusting
+it.
 Deterministic gates rather than a model grading itself. Held-out sets hidden from whatever wrote
 the patch. Guardrails attacked on purpose, with the failures published. And a dated record of
 what broke, what changed because of it, and what was tried and rejected.
